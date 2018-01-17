@@ -1,0 +1,167 @@
+@import 'sanitize.css';
+
+$light: #eee;
+$dark: #222;
+$shadow: var(--x) var(--y) 1rem black;
+
+:root {
+  font-family: system-ui;
+}
+
+body {
+  --x: 0.5rem;
+  --y: 0.5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+}
+
+%dark-section {
+  color: $light;
+  background-color: $dark;
+}
+
+%light-section {
+  color: $dark;
+  background-color: $light;
+}
+
+.narrow {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.narrow-res {
+  @media (width >= 1000px) {
+    @extend .narrow;
+  }
+}
+
+.wrapper-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  @extend %dark-section;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .button-row {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+    & a {
+      display: block;
+      margin: 0.5rem;
+      color: $light;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      & svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  & #down-arrow {
+    display: none;
+    @media (height >= 600px) {
+      display: block;
+      position: absolute;
+      bottom: 2rem;
+      left: 50vw;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.wrapper-2 {
+  @extend %light-section;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 1.1em;
+  & .container {
+    @extend .narrow;
+    max-width: 75rem;
+  }
+  & .row {
+    display: flex;
+    flex-wrap: wrap;
+    @extend .narrow-res;
+    & .item {
+      flex: 1 0;
+      min-width: 300px;
+    }
+  }
+  & .poem {
+    text-align: center;
+    line-height: 2;
+    @extend .narrow-res;
+    border-top: 1px solid $dark;
+    border-bottom: 1px solid $dark;
+  }
+}
+
+footer {
+  @extend %dark-section;
+  padding: 1rem;
+  & .container {
+    @extend .narrow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & > p {
+      white-space: nowrap;
+      margin: 1rem;
+    }
+    @media (width >= 500px) {
+      & :last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.margin {
+  margin: 1rem;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.box-shadow {
+  box-shadow: $shadow;
+}
+
+.text-shadow {
+  text-shadow: $shadow;
+}
+
+.bottom-rule {
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid $dark;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

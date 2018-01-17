@@ -1,0 +1,52 @@
+{
+  "name": "ryanzim.com",
+  "private": true,
+  "homepage": "https://github.com/RyanZim/ryanzim.com#readme",
+  "bugs": {
+    "url": "https://github.com/RyanZim/ryanzim.com/issues"
+  },
+  "license": "UNLICENCED",
+  "author": "Ryan Zimmerman",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanZim/ryanzim.com.git"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist && mkdir -p dist",
+    "build": "run-p build:*",
+    "build:css": "postcss src/index.css -o dist/index.css",
+    "build:html": "cp src/index.html dist/index.html",
+    "build:img": "cp src/*.jpeg dist",
+    "predeploy": "npm run build && replace-in-file --configFile replace.config.js",
+    "deploy": "surge dist www.ryanzim.com",
+    "format": "prettier '**/*.{js,css}' --write",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prewatch": "npm run build",
+    "watch": "run-p watch:*",
+    "watch:css": "onchange src/index.css -- npm run build:css",
+    "watch:html": "onchange src/index.html -- npm run build:html",
+    "watch:img": "onchange 'src/*.jpeg' -- npm run build:img",
+    "watch:serve": "live-server dist"
+  },
+  "dependencies": {
+    "sanitize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.1.2",
+    "onchange": "^3.3.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-extend-rule": "^1.1.0",
+    "postcss-import": "^11.0.0",
+    "postcss-simple-vars": "^4.1.0",
+    "prettier": "^1.10.2",
+    "replace-in-file": "^3.1.0",
+    "surge": "^0.19.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
