@@ -114,7 +114,7 @@
     <script>
       document.getElementById('down-arrow').addEventListener('click', function (e) {
         let rate = Math.ceil(window.innerHeight / 75);
-        let distance = 0;
+        let distance = window.pageYOffset;
         let interval = setInterval(function () {
           if (distance < window.innerHeight) {
             window.scrollBy(0, rate);
