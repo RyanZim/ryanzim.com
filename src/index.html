@@ -112,16 +112,14 @@
     </footer>
     <script>
       document.getElementById('down-arrow').addEventListener('click', function (e) {
-        let rate = Math.ceil(window.innerHeight / 75);
-        let distance = window.pageYOffset;
-        let interval = setInterval(function () {
-          if (distance < window.innerHeight) {
-            window.scrollBy(0, rate);
-            distance += rate;
-          } else {
-            clearInterval(interval);
+        function scroll () {
+          const distanceRemaining = window.innerHeight - window.pageYOffset;
+          if (distanceRemaining > 0) {
+            window.scrollBy(0, 12);
+            window.requestAnimationFrame(scroll);
           }
-        }, 5)
+        }
+        window.requestAnimationFrame(scroll);
       });
       document.addEventListener('mousemove', function (e) {
         mouseX = e.clientX || e.pageX;
