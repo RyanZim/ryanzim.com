@@ -35,7 +35,7 @@
   "devDependencies": {
     "live-server": "^1.2.0",
     "npm-run-all": "^4.1.3",
-    "onchange": "^6.0.0",
+    "onchange": "^7.0.0",
     "postcss-cli": "^6.0.0",
     "postcss-extend-rule": "^3.0.0",
     "postcss-import": "^12.0.0",
