@@ -30,7 +30,7 @@
     "watch:serve": "live-server dist"
   },
   "dependencies": {
-    "sanitize.css": "^11.0.0"
+    "sanitize.css": "^12.0.1"
   },
   "devDependencies": {
     "live-server": "^1.2.0",
