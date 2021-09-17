@@ -30,7 +30,7 @@
     "watch:serve": "http-server dist -o"
   },
   "dependencies": {
-    "sanitize.css": "^12.0.1"
+    "sanitize.css": "^13.0.0"
   },
   "devDependencies": {
     "http-server": "^13.0.2",
