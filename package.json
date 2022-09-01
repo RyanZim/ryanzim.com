@@ -38,7 +38,7 @@
     "onchange": "^7.1.0",
     "postcss-cli": "^10.0.0",
     "postcss-extend-rule": "^4.0.0",
-    "postcss-import": "^14.1.0",
+    "postcss-import": "^15.0.0",
     "postcss-preset-env": "^7.7.0",
     "postcss-simple-vars": "^6.0.3",
     "prettier": "^2.2.1",
