@@ -42,7 +42,7 @@
     "postcss-preset-env": "^8.0.0",
     "postcss-simple-vars": "^7.0.0",
     "prettier": "^2.2.1",
-    "replace-in-file": "^6.2.0",
+    "replace-in-file": "^7.0.0",
     "surge": "^0.23.0"
   },
   "prettier": {
