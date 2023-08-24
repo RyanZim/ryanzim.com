@@ -53,7 +53,6 @@ a {
   margin: 0 0.5rem;
   border-radius: 50%;
   box-shadow: $shadow;
-
 }
 .button-row a svg {
   width: 3rem;
