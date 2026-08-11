@@ -1,0 +1,7 @@
+{
+  "from": "<!-- StatCounter -->",
+  "to": "<!-- Start of StatCounter Code for Default Guide -->\n<script type=\"text/javascript\">\nvar sc_project=10664462;\nvar sc_invisible=1;\nvar sc_security=\"3eb2234c\";\nvar scJsHost = ((\"https:\" == document.location.protocol) ?\n\"https://secure.\" : \"http://www.\");\ndocument.write(\"<sc\"+\"ript type='text/javascript' src='\" +\nscJsHost+\n\"statcounter.com/counter/counter.js'></\"+\"script>\");\n</script>\n<noscript><div class=\"statcounter\"><a title=\"Web Analytics\"\nhref=\"http://statcounter.com/\" target=\"_blank\"><img\nclass=\"statcounter\"\nsrc=\"//c.statcounter.com/10664462/0/3eb2234c/1/\" alt=\"Web\nAnalytics\"></a></div></noscript>\n<!-- End of StatCounter Code for Default Guide -->",
+  "files": [
+    "dist/index.html"
+  ]
+}
