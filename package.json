@@ -18,7 +18,7 @@
     "build:css": "postcss src/index.css -o dist/index.css",
     "build:html": "cp src/index.html dist/index.html",
     "build:img": "cp src/*.jpeg dist",
-    "predeploy": "npm run build && replace-in-file --configFile replace.config.js",
+    "predeploy": "npm run build && replace-in-file --configFile replace.config.json",
     "deploy": "surge dist www.ryanzim.com",
     "format": "prettier '**/*.{js,css,html}' --write",
     "test": "echo \"Error: no test specified\" && exit 1",
