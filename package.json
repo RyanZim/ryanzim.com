@@ -41,7 +41,7 @@
     "postcss-simple-vars": "^7.0.0",
     "prettier": "^3.0.0",
     "replace-in-file": "^9.0.0",
-    "surge": "^0.41.0"
+    "surge": "^0.44.0"
   },
   "prettier": {
     "singleQuote": true
